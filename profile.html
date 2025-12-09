@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Career Dendrogram</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Career Dendrogram</span>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="careers.html"><i class="fas fa-briefcase"></i> Career Explorer</a></li>
+                <li><a href="colleges.html"><i class="fas fa-university"></i> Colleges</a></li>
+                <li><a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div>
+                    <h1 id="profileName">User Name</h1>
+                    <p id="profileEmail">user@email.com</p>
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <div class="info-section">
+                    <h2><i class="fas fa-user"></i> Personal Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p id="infoName">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p id="infoEmail">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone</label>
+                            <p id="infoPhone">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Member Since</label>
+                            <p id="infoMemberSince">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2><i class="fas fa-star"></i> Career Interests</h2>
+                    <div class="interests-tags" id="interestsTags">
+                        <!-- Interests will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2><i class="fas fa-chart-line"></i> Activity Summary</h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <i class="fas fa-university"></i>
+                            <h3>8+</h3>
+                            <p>Colleges Explored</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>9+</h3>
+                            <p>Careers Viewed</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-comments"></i>
+                            <h3>Active</h3>
+                            <p>Chatbot Usage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="chatbot-toggle" onclick="toggleChatbot()">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-header-content">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4>Career AI Assistant</h4>
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+            <button class="chatbot-close" onclick="toggleChatbot()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! 👋 How can I help you today?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="handleChatKeypress(event)">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

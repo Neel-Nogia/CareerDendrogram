@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Career Dendrogram</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Career Dendrogram</span>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="careers.html"><i class="fas fa-briefcase"></i> Career Explorer</a></li>
+                <li><a href="colleges.html"><i class="fas fa-university"></i> Colleges</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="about-hero">
+            <h1><i class="fas fa-info-circle"></i> About Career Dendrogram</h1>
+            <p>Problem ID: PID139 - Challenge Title: Career Dendrogram</p>
+            <p class="subtitle">Tribal Development Department Initiative</p>
+        </div>
+
+        <div class="about-content">
+            <section class="about-section">
+                <h2>Our Mission</h2>
+                <p>Career Dendrogram is designed to address the critical need for career guidance among students. Every student has unique aspirations and talents, but often lacks the proper guidance to make informed decisions about their future.</p>
+                <p>We provide comprehensive, authentic information about career paths, educational institutes, job trends, and future opportunities to help students select the right course and excel in their chosen field.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>The Problem We Solve</h2>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Lack of Guidance</h3>
+                        <p>Students face confusion in choosing career paths due to limited access to career counseling and information.</p>
+                    </div>
+                    <div class="problem-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Wrong Decisions</h3>
+                        <p>Without proper guidance, students often make incorrect course selections leading to dissatisfaction and career changes.</p>
+                    </div>
+                    <div class="problem-card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Information Gap</h3>
+                        <p>Limited knowledge about available institutes, courses, and their specializations hinders informed decision-making.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2>Our Solution</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <i class="fas fa-university"></i>
+                        <h3>College Database</h3>
+                        <p>Comprehensive information about top institutes with details on programs, fees, contact information, and specializations.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Career Explorer</h3>
+                        <p>Detailed career path information including salary ranges, job outlook, required skills, and education requirements.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Assistant</h3>
+                        <p>24/7 intelligent chatbot providing instant answers to career queries and personalized guidance.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Job Market Trends</h3>
+                        <p>Up-to-date information on job market trends, salary expectations, and future career prospects.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2>Target Users</h2>
+                <ul class="users-list">
+                    <li><i class="fas fa-check-circle"></i> Students completing 10th and 12th grade</li>
+                    <li><i class="fas fa-check-circle"></i> Students seeking career guidance at early stages</li>
+                    <li><i class="fas fa-check-circle"></i> Parents looking for authentic career information for their children</li>
+                    <li><i class="fas fa-check-circle"></i> Career counselors and educators</li>
+                    <li><i class="fas fa-check-circle"></i> Anyone exploring career change opportunities</li>
+                </ul>
+            </section>
+
+            <section class="about-section">
+                <h2>Key Features</h2>
+                <div class="key-features">
+                    <div class="key-feature-item">
+                        <span class="feature-number">01</span>
+                        <div>
+                            <h4>Authentic Data</h4>
+                            <p>Verified information from official sources including Ganpat University and top IITs/NITs</p>
+                        </div>
+                    </div>
+                    <div class="key-feature-item">
+                        <span class="feature-number">02</span>
+                        <div>
+                            <h4>Advanced Search & Filters</h4>
+                            <p>Find colleges by location, fees, specialization, and ranking with powerful search tools</p>
+                        </div>
+                    </div>
+                    <div class="key-feature-item">
+                        <span class="feature-number">03</span>
+                        <div>
+                            <h4>Comprehensive Career Information</h4>
+                            <p>Detailed insights into 50+ careers across Technology, Medical, Engineering, Design, and Science</p>
+                        </div>
+                    </div>
+                    <div class="key-feature-item">
+                        <span class="feature-number">04</span>
+                        <div>
+                            <h4>User-Friendly Interface</h4>
+                            <p>Modern, responsive design that works seamlessly on desktop, tablet, and mobile devices</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section contact-section">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>support@careerdendrogram.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+91-1234567890</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Address</h4>
+                        <p>Tribal Development Department<br>Gujarat, India</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <button class="chatbot-toggle" onclick="toggleChatbot()">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-header-content">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4>Career AI Assistant</h4>
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+            <button class="chatbot-close" onclick="toggleChatbot()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! 👋 How can I help you today?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="handleChatKeypress(event)">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

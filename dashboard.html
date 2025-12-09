@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Career Dendrogram</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Career Dendrogram</span>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="careers.html"><i class="fas fa-briefcase"></i> Career Explorer</a></li>
+                <li><a href="colleges.html"><i class="fas fa-university"></i> Colleges</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome, <span id="userName">User</span>!</h1>
+                <p>Your journey to discovering the perfect career path starts here</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h3>8+</h3>
+                            <p>Top Colleges</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h3>50+</h3>
+                            <p>Career Paths</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h3>100%</h3>
+                            <p>Free Guidance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Sections -->
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">Explore Your Options</h2>
+                
+                <div class="feature-grid">
+                    <!-- Career Explorer Card -->
+                    <div class="feature-card" onclick="window.location.href='careers.html'">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Career Explorer</h3>
+                        <p>Discover various career paths in Technology, Medical, Engineering, Design, and more.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> 50+ Career Options</li>
+                            <li><i class="fas fa-check"></i> Salary Insights</li>
+                            <li><i class="fas fa-check"></i> Job Market Trends</li>
+                        </ul>
+                        <button class="card-btn">Explore Careers <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- College Search Card -->
+                    <div class="feature-card" onclick="window.location.href='colleges.html'">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>College Database</h3>
+                        <p>Search and compare top colleges with detailed information about programs and fees.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> 8+ Top Institutes</li>
+                            <li><i class="fas fa-check"></i> Advanced Filters</li>
+                            <li><i class="fas fa-check"></i> Contact Details</li>
+                        </ul>
+                        <button class="card-btn">Browse Colleges <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- AI Chatbot Card -->
+                    <div class="feature-card" onclick="openChatbot()">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Career Assistant</h3>
+                        <p>Get instant answers to your career questions with our intelligent chatbot.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> 24/7 Available</li>
+                            <li><i class="fas fa-check"></i> Instant Responses</li>
+                            <li><i class="fas fa-check"></i> Personalized Advice</li>
+                        </ul>
+                        <button class="card-btn">Start Chat <i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured College -->
+        <section class="spotlight-section">
+            <div class="container">
+                <h2 class="section-title">Featured Institution</h2>
+                
+                <div class="spotlight-card">
+                    <div class="spotlight-image">
+                        <div class="spotlight-badge">Featured</div>
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3>Ganpat University - Institute of Computer Technology</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Kherva, Mehsana, Gujarat</p>
+                        
+                        <div class="spotlight-info">
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Programs</strong>
+                                    <p>B.Tech CSE, AI & ML, Data Science, M.Tech, MCA, Ph.D</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <div>
+                                    <strong>Fees</strong>
+                                    <p>₹1,70,000/year for B.Tech CSE (AI & ML)</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Contact</strong>
+                                    <p>+91-7567020548</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spotlight-features">
+                            <span class="tag"><i class="fas fa-star"></i> 7000+ Students</span>
+                            <span class="tag"><i class="fas fa-chalkboard-teacher"></i> 1200+ Faculty</span>
+                            <span class="tag"><i class="fas fa-hotel"></i> 28 Hostels</span>
+                            <span class="tag"><i class="fas fa-flask"></i> AI & Robotics Labs</span>
+                        </div>
+
+                        <button class="btn-primary" onclick="window.location.href='colleges.html'">
+                            View Full Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links-section">
+            <div class="container">
+                <h2 class="section-title">Quick Access</h2>
+                <div class="quick-links-grid">
+                    <a href="careers.html" class="quick-link">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Technology Careers</span>
+                    </a>
+                    <a href="careers.html" class="quick-link">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Medical Careers</span>
+                    </a>
+                    <a href="careers.html" class="quick-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Engineering Careers</span>
+                    </a>
+                    <a href="careers.html" class="quick-link">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Design Careers</span>
+                    </a>
+                    <a href="colleges.html" class="quick-link">
+                        <i class="fas fa-search"></i>
+                        <span>Search Colleges</span>
+                    </a>
+                    <a href="profile.html" class="quick-link">
+                        <i class="fas fa-user-edit"></i>
+                        <span>Update Profile</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Chatbot Button -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()" title="Chat with AI Assistant">
+        <i class="fas fa-comment-dots"></i>
+        <span class="notification-badge">!</span>
+    </button>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-header-content">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4>Career AI Assistant</h4>
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+            <button class="chatbot-close" onclick="toggleChatbot()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! 👋 I'm your Career AI Assistant. How can I help you today?</p>
+                    <div class="quick-replies">
+                        <button onclick="sendQuickReply('Tell me about AI careers')">AI Careers</button>
+                        <button onclick="sendQuickReply('Show me colleges')">Top Colleges</button>
+                        <button onclick="sendQuickReply('Salary information')">Salary Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="handleChatKeypress(event)">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
